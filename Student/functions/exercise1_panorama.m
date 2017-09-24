@@ -6,9 +6,9 @@
 clear all                   % Remove all old variables
 close all                   % Close all figures
 clc                         % Clear the command window
-addpath( genpath( 'E:/Skola/Datorfotografi/Student/' ) );% Add paths to all subdirectories of the parent directory
+addpath( genpath( '../' ) );% Add paths to all subdirectories of the parent directory
 
-LOAD_DATA           = false;
+LOAD_DATA           = true;
 REFERENCE_VIEW      = 3;
 CAMERAS             = 3;
 image_names_file    = '../images/names_images_kth.txt';
