@@ -1,0 +1,13 @@
+How much improvement did the normalization yield in terms of average and maximum error?
+ - Normalization yielded a very small improvement of average error and a slightly larger improvement in maximum error.
+
+What is the minimum number of point-correspondences needed to determine the homography between 2 images?
+ - We would need 4 pairs of points, i.e. 8 points in total to be able to fully determine the H-matrix (1 value can be removed by normalizing H over that value. making it 1).
+
+ Given that you have the minimum number of point-correspondnences to determine a homography, the homography might still not be uniquely determined,
+ how can this happen and how can you check if this has happened?
+- We can generate H-matrices that are not invertible. I think this happens when Q's rows/columns are not linearly independent.
+To check for this we can check if H is invertible, through calculating determinant (Nonzero -> invertible).
+
+Can you extend the method used in this exercise to generate a panorama for images from a camera rotating about 360o?
+- It would work for MORE images, but not for 360 degrees, the warping of the images would become to extreme after a while.
